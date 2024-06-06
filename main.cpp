@@ -1,5 +1,6 @@
 #include <iostream>
 #include "search.hpp"
+#include "sort.hpp"
 
 int main()
 {
@@ -19,31 +20,33 @@ int main()
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
+    const int SIZE = 5;
+
     int t[SIZE];
     wypelnij_tablice(t, SIZE);
-    wydrukuj_tablice();
+    wydrukuj_tablice(t, SIZE);
     sortowanie_babelkowe(t, SIZE);
-    wydrukuj_tablice();
+    wydrukuj_tablice(t, SIZE);
 
-    wypelnij_tablice();
-    wydrukuj_tablice();
+    wypelnij_tablice(t, SIZE);
+    wydrukuj_tablice(t, SIZE);
     sortowanie_przez_scalanie(t, SIZE);
-    wydrukuj_tablice();
+    wydrukuj_tablice(t, SIZE);
 
-    wypelnij_tablice();
-    wydrukuj_tablice();
+    wypelnij_tablice(t, SIZE);
+    wydrukuj_tablice(t, SIZE);
     sortowanie_szybkie(t, SIZE);
-    wydrukuj_tablice();
+    wydrukuj_tablice(t, SIZE);
 
-    wypelnij_tablice();
-    wydrukuj_tablice();
+    wypelnij_tablice(t, SIZE);
+    wydrukuj_tablice(t, SIZE);
     sortowanie_przez_wstrzasanie(t, SIZE);
-    wydrukuj_tablice();
+    wydrukuj_tablice(t, SIZE);
 
-    wypelnij_tablice();
-    wydrukuj_tablice();
+    wypelnij_tablice(t, SIZE);
+    wydrukuj_tablice(t, SIZE);
     sortowanie_przez_wstawianie(t, SIZE, t_out);
-    wydrukuj_tablice();
+    wydrukuj_tablice(t, SIZE);
 
     int tt[SIZE] = {};
     int k_exist_in_tt = x;
