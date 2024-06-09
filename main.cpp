@@ -23,6 +23,8 @@ int main()
     const int SIZE = 5;
 
     int t[SIZE];
+    int t_out[SIZE];
+
     wypelnij_tablice(t, SIZE);
     wydrukuj_tablice(t, SIZE);
     sortowanie_babelkowe(t, SIZE);
@@ -48,9 +50,9 @@ int main()
     sortowanie_przez_wstawianie(t, SIZE, t_out);
     wydrukuj_tablice(t, SIZE);
 
-    int tt[SIZE] = {};
-    int k_exist_in_tt = x;
-    int k_not_exist_in_tt = y;
+    int tt[SIZE] = { 2, 5, 7, 1, -7 };
+    int k_exist_in_tt = 7;
+    int k_not_exist_in_tt = 8;
 
     std::cout << wyszukiwanie_binarne(tt, SIZE, k_exist_in_tt);
     std::cout << wyszukiwanie_binarne(tt, SIZE, k_not_exist_in_tt);
