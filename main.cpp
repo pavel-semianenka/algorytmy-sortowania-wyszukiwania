@@ -1,11 +1,18 @@
 #include <iostream>
 #include <cstdlib> // dla rand() i srand()
 #include <ctime>   // dla time()
+#include <windows.h> // dla ustawienia lokalizacji na polską w Windows
 #include "search.hpp"
 #include "sort.hpp"
 
 int main()
 {
+    // Ustawienie lokalizacji na polską
+    std::setlocale(LC_ALL, "pl_PL.UTF-8");
+    // Tylko dla Windows:
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+
     const int SIZE = 5;
 
     int t[SIZE];
