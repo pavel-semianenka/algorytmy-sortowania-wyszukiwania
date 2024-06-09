@@ -14,30 +14,35 @@ int main()
     // Ustawienie ziarna dla generatora liczb losowych
     std::srand(std::time(0));
 
+    std::cout <<  "Sortowanie bąbelkowe (Bubble Sort)" << std::endl;
     wypelnij_tablice(t, SIZE);
     wydrukuj_tablice(t, SIZE);
-    //sortowanie_babelkowe(t, SIZE);
+    sortowanie_babelkowe(t, SIZE);
     wydrukuj_tablice(t, SIZE);
 
+    std::cout <<  "Sortowanie przez scalanie (Merge Sort)" << std::endl;
     wypelnij_tablice(t, SIZE);
     wydrukuj_tablice(t, SIZE);
-    //sortowanie_przez_scalanie(t, SIZE);
+    sortowanie_przez_scalanie(t, SIZE);
     wydrukuj_tablice(t, SIZE);
 
+    std::cout <<  "Sortowanie szybkie (Quick Sort)" << std::endl;
     wypelnij_tablice(t, SIZE);
     wydrukuj_tablice(t, SIZE);
-    //sortowanie_szybkie(t, SIZE);
+    sortowanie_szybkie(t, SIZE);
     wydrukuj_tablice(t, SIZE);
 
+    std::cout <<  "Sortowanie przez wstrząsanie (Cocktail Shaker Sort)" << std::endl;
     wypelnij_tablice(t, SIZE);
     wydrukuj_tablice(t, SIZE);
-    //sortowanie_przez_wstrzasanie(t, SIZE);
+    sortowanie_przez_wstrzasanie(t, SIZE);
     wydrukuj_tablice(t, SIZE);
 
+    std::cout <<  "Sortowanie przez wstawianie (Insertion Sort)" << std::endl;
     wypelnij_tablice(t, SIZE);
     wydrukuj_tablice(t, SIZE);
-    //sortowanie_przez_wstawianie(t, SIZE, t_out);
-    wydrukuj_tablice(t, SIZE);
+    sortowanie_przez_wstawianie(t, SIZE, t_out);
+    wydrukuj_tablice(t_out, SIZE);
 
     int tt[SIZE] = { 2, 5, 7, 1, -7 };
     int k_exist_in_tt = 7;
