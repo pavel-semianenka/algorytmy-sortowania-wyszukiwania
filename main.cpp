@@ -44,24 +44,40 @@ int main()
     sortowanie_przez_wstawianie(t, SIZE, t_out);
     wydrukuj_tablice(t_out, SIZE);
 
-    int tt[SIZE] = { 2, 5, 7, 1, -7 };
-    int k_exist_in_tt = 7;
-    int k_not_exist_in_tt = 8;
+    const int tt[SIZE] = { 2, 5, 7, 1, -7 };
+    int tt_sorted[SIZE];
+    const int k_exist_in_tt = 7;
+    const int k_not_exist_in_tt = 8;
 
-    //std::cout << wyszukiwanie_binarne(tt, SIZE, k_exist_in_tt);
-    //std::cout << wyszukiwanie_binarne(tt, SIZE, k_not_exist_in_tt);
+    std::cout << "Tablica dla wyszukiwania" << std::endl;
+    wydrukuj_tablice(tt, SIZE);
 
-    //std::cout << wyszukiwanie_liniowe(tt, SIZE, k_exist_in_tt);
-    //std::cout << wyszukiwanie_liniowe(tt, SIZE, k_not_exist_in_tt);
+    std::cout << "Istnująncy element: " << (k_exist_in_tt) << std::endl;
+    std::cout << "Nie istnująncy element: " << (k_not_exist_in_tt) << std::endl;
 
-    //std::cout << wyszukiwanie_liniowe_z_wart(tt, SIZE, k_exist_in_tt);
-    //std::cout << wyszukiwanie_liniowe_z_wart(tt, SIZE, k_not_exist_in_tt);
+    std::cout << "Wyszukiwanie binarne" << std::endl;
+    std::cout << "Indeks istnująncego elementa " << wyszukiwanie_binarne(tt, SIZE, k_exist_in_tt) << std::endl;
+    std::cout << "Indeks nie istnująncego elementa " << wyszukiwanie_binarne(tt, SIZE, k_not_exist_in_tt) << std::endl;
 
-    //std::cout << wyszukiwanie_interpolacyjne(tt, SIZE, k_exist_in_tt);
-    //std::cout << wyszukiwanie_interpolacyjne(tt, SIZE, k_not_exist_in_tt);
+    std::cout <<  "Wyszukiwanie liniowe" << std::endl;
+    std::cout << "Indeks istnująncego elementa " << wyszukiwanie_liniowe(tt, SIZE, k_exist_in_tt) << std::endl;
+    std::cout << "Indeks nie istnująncego elementa " << wyszukiwanie_liniowe(tt, SIZE, k_not_exist_in_tt) << std::endl;
 
-    //std::cout << wyszukiwanie_skokowe(tt, SIZE, k_exist_in_tt);
-    //std::cout << wyszukiwanie_skokowe(tt, SIZE, k_not_exist_in_tt);
+    std::cout <<  "Wyszukiwanie liniowe z wartownikiem" << std::endl;
+    std::cout << "Indeks istnująncego elementa " << wyszukiwanie_liniowe_z_wart(tt, SIZE, k_exist_in_tt) << std::endl;
+    std::cout << "Indeks nie istnująncego elementa " << wyszukiwanie_liniowe_z_wart(tt, SIZE, k_not_exist_in_tt) << std::endl;
+
+    std::cout << "Wyszukiwanie interpolacyjne oraz skokowe zakładają, że tablica jest posortowana, więc sortujemy tablicą:" << std::endl;
+    sortowanie_przez_wstawianie(tt, SIZE, tt_sorted);
+    wydrukuj_tablice(tt_sorted, SIZE);
+
+    std::cout << "Wyszukiwanie interpolacyjne" << std::endl;
+    std::cout << "Indeks istnująncego elementa " << wyszukiwanie_interpolacyjne(tt_sorted, SIZE, k_exist_in_tt) << std::endl;
+    std::cout << "Indeks nie istnująncego elementa " << wyszukiwanie_interpolacyjne(tt_sorted, SIZE, k_not_exist_in_tt) << std::endl;
+
+    std::cout <<  "Wyszukiwanie skokowe" << std::endl;
+    std::cout << "Indeks istnująncego elementa " << wyszukiwanie_skokowe(tt_sorted, SIZE, k_exist_in_tt) << std::endl;
+    std::cout << "Indeks nie istnująncego elementa " << wyszukiwanie_skokowe(tt_sorted, SIZE, k_not_exist_in_tt) << std::endl;
 
     return 0;
 }
