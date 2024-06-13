@@ -4,6 +4,14 @@
 #include <cstdlib> // dla rand() i srand()
 #include <ctime>   // dla time()
 
+void swap(int * u, int * v)
+{
+    int temp;
+    temp= *u;
+    *u = *v;
+    *v = temp;
+}
+
 void wypelnij_tablice(int *t, const int size) {
     // Ustawienie ziarna dla generatora liczb losowych
     //std::srand(std::time(0));
@@ -150,6 +158,7 @@ void sortowanie_przez_wstrzasanie(int *t, const int size) {
     }
 }
 
+
 //
 //Sortowanie przez wstawianie (Insertion Sort)
 //
@@ -170,4 +179,12 @@ void sortowanie_przez_wstawianie(const int *t, const int size, int *t_out) {
         t_out[j + 1] = key;
     }
 }
-
+/*
+void Swap(int*u, int*v)
+{
+    int temp;
+    temp= *u;
+    *u = *v;
+    *v = temp;
+}
+*/
